@@ -67,4 +67,29 @@ npm i  class-validator class-transformer
 npm i dotenv
 npm i joi
 ``
+## Instalación y configuración de base de datos
+## Instlación
+yarn add prisma --save-dev
+npm install prisma --save-dev
+
+## Inicialización
+yarn prisma init
+npx prisma init
+
+## Generador del cliente
+generator client {
+  provider        = "prisma-client"
+  output          = "../src/generated/prisma"
+  moduleFormat    = "cjs" ## Agregar en el archivo schema.prisma
+}
+
+datasource db {
+  provider = "sqlite" # Definir la base de datos
+}
+
+yarn add @prisma/client
+yarn  prisma generate
+
+npm install @prisma/client
+npx prisma generate
 
